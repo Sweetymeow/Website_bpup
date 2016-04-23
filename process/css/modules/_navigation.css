@@ -1,0 +1,42 @@
+header #transcover .nav{
+/*    height: 10vh;*/
+    margin-top: 1.75rem;
+    
+    .nav-elements{
+        display: flex;
+    
+        .navbar{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-content: flex-start;
+/*            flex-wrap: wrap;*/
+            width: 100%;
+            
+            li{
+                list-style-type: none;
+                line-height: 150%;
+                padding: 1rem;
+                align-items: center;
+                justify-content: center;
+                
+                a:not(.branding){
+                    max-width: 50%;
+                    font-weight: $font-weight-normal;
+                    color: $dark-sec-link;
+                    text-decoration: none;
+                }
+                a:hover{
+                    color: $yellow;
+                }
+                
+            }
+            
+            .branding{
+                max-width: 200px;
+                width: 30%;
+            }
+        }
+    }
+}

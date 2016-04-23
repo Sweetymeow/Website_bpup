@@ -1,0 +1,60 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,600,700);
+@font-face {
+  font-family: 'glyphicons';
+  src: url('./src/fonts/glyphicons-halflings-regular.ttf'); /* IE9 Compat Modes */
+  src: url('./src/fonts/glyphicons-halflings-regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./src/fonts/glyphicons-halflings-regular.svg') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'Gujarati';
+  src: url('./src/fonts/GujaratiSangamMN.ttc'); /* IE9 Compat Modes */
+}
+@font-face {
+  font-family: 'Gurmukhi';
+  src: url('./src/fonts/GurmukhiSangamMN.ttc'); /* IE9 Compat Modes */
+}
+
+$font-main: Raleway, Helvetica, Arial, sans-serif;
+$font-weight-normal: 300;
+$font-weight-bold: 600;
+$font-weight-heavy: 700;
+$font-icon: glyphicons, sans-serif;
+$font-Guj: Gujarati, sans-serif;
+$font-Gur: Gurmukhi, sans-serif;
+
+$btnyellow: #f3b756;
+$yellow: #F3D350;
+$blue: #0076A3;
+$green: #BFC406;
+$orange: #FFB12F;
+$red: #D14348;
+$purple:  #6D73C2;
+$white: #ffffff;
+$black: #000000;
+
+$bg-pattern: #f2f2f2;
+$dark-sec-title: #e3ac54;
+$dark-sec-link: #FFF;
+$dark-sec-icon: white;
+$dark-sec-btnlabel: #F2B65F;
+$dark-sec-btnborder: #9b7139;
+
+$light-sec-title: #7a7a7b;
+$light-sec-icon: #41403e;
+$light-sec-btnlabel: #eee2c2;
+$light-sec-btnbg: #a99c8d;
+$light-sec-btnshadow: rgba(0,0,0,.4);
+
+$sec-trans-cover: rgba(0,0,0,.4);
+$color-sec-bg: #4d463c;
+
+$color-main: black;
+$color-background: #EEE8D6;
+
+$small: screen and (min-width: 600px);
+$medium: screen and (min-width: 900px);
+$large: screen and (min-width: 1200px);
+
+$section-height: 100vh;
+$container-default-width: 80%;
+$container-max-width: 1200px;

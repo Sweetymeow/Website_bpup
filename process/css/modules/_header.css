@@ -1,0 +1,79 @@
+header#bgImage{
+    @mixin backImage '../img/brainpup-info-bg.jpg';
+    
+    @media $small{
+        @mixin backImage '../img/brainpup-info-bg.jpg', 800px;
+    }
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    .tagline{
+        display: none;
+        
+        @media $small{
+            display: block;
+            color: $white;
+            max-width: 40em;
+            font-size: 2.5rem;
+            padding-top: 16vh;
+        }
+    }
+}
+
+/*  
+header#bgImage{ background-image: url('../img/brainpup-info-bg.jpg'); }  
+*/
+
+header #transcover{
+    position: relative;
+    background: $sec-trans-cover;
+    height: $section-height;
+}
+
+header #transcover .trashape{
+    height: 15vh;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    display: inline-flex;
+}
+header #transcover .trashape span{
+/*   vertical-align's baseline   */
+    height: 100%;
+    width: 1px;
+    display: inline-block;
+    transform: translateX(-1px);
+    vertical-align:bottom;
+}
+header #transcover .trashape .whitetra{
+    float: left;
+    width: 50vw;
+    height: 0;
+    padding-bottom: 20vh;
+    background-image: url('../img/svg/WhiteRectangle.svg');
+    background-clip: border-box;
+    background-size: cover;
+/*    background-size: contain;*/
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+}
+.right{
+    transform: scaleX(-1);
+}
+
+
+/* navbar link */
+/*
+ul.navbar {
+    display: inline-flex;
+}
+ul.navbar li {
+    list-style-type: none;
+    padding-left: 1em;
+    font-size: 1.2rem;
+}
+ul.navbar li a{     
+    color: $dark-sec-link;
+}*/
