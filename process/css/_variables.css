@@ -52,13 +52,15 @@ $color-sec-bg: #4d463c;
 $color-main: black;
 $color-background: #EEE8D6;
 
-$xsmall: screen and (min-width: 320px);
+$xsmall: screen and (max-width: 425px);
 $small: screen and (min-width: 600px);
 $medium: screen and (min-width: 900px);
 $large: screen and (min-width: 1200px);
 
 $section-height: 100vh;
+$section-H-height: 100vh;
 $container-default-width: 80%;
 $container-max-width: 1200px;
 
 $section-title-font-size: 7rem;
+$section-title-sm-ft-size: 4rem;

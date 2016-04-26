@@ -39,10 +39,12 @@ header#bgImage{
         .headline{
 /*           font-size: 8rem;*/
             padding-top: 2vh;
+            color: $white;
         }
         
         .sub-headline{
             font-family: $font-Guj;
+            font-weight: lighter;
         }
     }
 }

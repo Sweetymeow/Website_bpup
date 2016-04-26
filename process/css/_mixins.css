@@ -21,7 +21,7 @@
       background: linear-gradient( to bottom, $grstart, $grend), url($image);
       background-repeat: no-repeat;
       background-position: $bgPos;
-      background-size: cover;
+      background-size: contain;
       height: 100vh;
       max-height: $height;
 }

@@ -56,7 +56,8 @@ em {
 }
 
 header, section{
-    height: $section-height;
+    min-height: $section-height;
+/*    height: 150vh;*/
 }
 
 .center{

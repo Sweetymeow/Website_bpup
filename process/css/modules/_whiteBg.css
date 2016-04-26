@@ -3,6 +3,10 @@
     @mixin circuitPattern '../img/brainpup_circuitbg.png';
     font-family: $font-Guj;
     
+    @media $xsmall{
+        height: $section-H-height;
+    }
+    
     .white-bg>div{
         height: 100%;
     }
@@ -29,12 +33,29 @@
         }
     } /* section-icon*/
     
-    .text-content{
+    
+    .main-content{
         max-height: 80vh;
         height: 78vh;
         
         .headline{
-            font-size: $section-title-font-size;
+            font-size: $section-title-sm-ft-size;
+            line-height: 3rem;
+            @media $small{
+                font-size: $section-title-font-size;
+                line-height: 8rem;
+            }
+        }
+        
+        .text-content{
+            column-count: 2;
+            column-gap: 30px;
+            margin: 5vh auto;
+            text-align: left;
+            @media $xsmall{
+                column-count: 1;
+                font-size: 1rem;
+            }
         }
     }
 }

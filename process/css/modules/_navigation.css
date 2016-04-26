@@ -3,7 +3,10 @@ header #transcover .nav{
     margin-top: 1.75rem;
     
     .nav-elements{
-        display: flex;
+/*        display: flex;*/
+        @media $small{
+            display: flex;
+        }
     
         .navbar{
             margin: 0;
@@ -14,12 +17,17 @@ header #transcover .nav{
 /*            flex-wrap: wrap;*/
             width: 100%;
             
+            
             li{
                 list-style-type: none;
                 line-height: 150%;
                 padding: 1rem;
                 align-items: center;
                 justify-content: center;
+                @media $xsmall{
+                    padding: 3px;
+                    font-size: 1.2rem;
+                }
                 
                 a:not(.branding){
                     max-width: 50%;
@@ -30,12 +38,25 @@ header #transcover .nav{
                 a:hover{
                     color: $yellow;
                 }
-                
+                a.branding{
+                              
+                    @media $xsmall{
+                        position: absolute;
+                        top: 16vh;
+                        padding: 0px;
+                        left: 40%;
+                    }
+                }
             }
             
             .branding{
                 max-width: 200px;
-                width: 30%;
+                margin: 0 auto;
+                
+                @media $small{
+                    width: 20%;
+                    margin: 0;
+                }
             }
         }
     }
