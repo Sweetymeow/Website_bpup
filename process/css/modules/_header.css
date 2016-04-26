@@ -10,14 +10,39 @@ header#bgImage{
     justify-content: space-around;
     
     .tagline{
-        display: none;
+        /* display: none;*/
+        display: block;
+        color: $white;
+        padding-top: 20vh;
         
         @media $small{
             display: block;
-            color: $white;
             max-width: 40em;
             font-size: 2.5rem;
+            font-weight: $font-weight-normal;
+            
+            .headline{
+                font-size: 6rem;
+            }
+        }
+        @media $middle{
+            display: block;
+            max-width: 40em;
             padding-top: 16vh;
+            font-weight: $font-weight-normal;
+            
+            .headline{
+                font-size: 8rem;
+            }
+        }
+        
+        .headline{
+/*           font-size: 8rem;*/
+            padding-top: 2vh;
+        }
+        
+        .sub-headline{
+            font-family: $font-Guj;
         }
     }
 }
@@ -38,6 +63,7 @@ header #transcover .trashape{
     position: absolute;
     bottom: 0;
     display: inline-flex;
+    overflow: hidden;
 }
 header #transcover .trashape span{
 /*   vertical-align's baseline   */

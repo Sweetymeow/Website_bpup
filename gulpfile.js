@@ -34,16 +34,25 @@ gulp.task('webserver', function() {
   console.log(dest);
   gulp.src(dest)
     .pipe(webserver({
-        port: 8090,
-        host: 'localhost',
         open: true,
-        fallback:   'index.html',
         livereload: true,
-        directoryListing: {
-            enable: true,
-            path: dest
-        }
     }));
 });
+
+//gulp.task('webserver', function() {
+//  console.log(dest);
+//  gulp.src(dest)
+//    .pipe(webserver({
+//        port: 8090,
+//        host: 'localhost',
+//        open: true,
+//        fallback:   'index.html',
+//        livereload: true,
+//        directoryListing: {
+//            enable: true,
+//            path: dest
+//        }
+//    }));
+//});
 
 gulp.task('default', ['html', 'css', 'webserver','watch']);

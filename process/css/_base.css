@@ -11,8 +11,8 @@ body {
   margin: 0;
   padding: 0;
   color: $color-main;
-  background-color: $white;
-/*  background-color: $color-background;*/
+/*  background-color: $white;*/
+  background-color: $color-background;
   font-family: $font-main;
   font-size: 1.4rem;
   line-height: 160%;

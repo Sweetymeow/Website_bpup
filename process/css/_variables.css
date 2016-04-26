@@ -1,20 +1,21 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,600,700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,300,600,700);
 @font-face {
   font-family: 'glyphicons';
-  src: url('./src/fonts/glyphicons-halflings-regular.ttf'); /* IE9 Compat Modes */
-  src: url('./src/fonts/glyphicons-halflings-regular.woff') format('woff'), /* Pretty Modern Browsers */
-       url('./src/fonts/glyphicons-halflings-regular.svg') format('svg'); /* Legacy iOS */
+  src: url('src/fonts/glyphicons-halflings-regular.ttf'); /* IE9 Compat Modes */
+  src: url('src/fonts/glyphicons-halflings-regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('src/fonts/glyphicons-halflings-regular.svg') format('svg'); /* Legacy iOS */
 }
 @font-face {
   font-family: 'Gujarati';
-  src: url('./src/fonts/GujaratiSangamMN.ttc'); /* IE9 Compat Modes */
+  src: url('src/fonts/GujaratiSangamMN.ttc'); /* IE9 Compat Modes */
 }
 @font-face {
   font-family: 'Gurmukhi';
-  src: url('./src/fonts/GurmukhiSangamMN.ttc'); /* IE9 Compat Modes */
+  src: url('src/fonts/GurmukhiSangamMN.ttc'); /* IE9 Compat Modes */
 }
 
 $font-main: Raleway, Helvetica, Arial, sans-serif;
+$font-weight-light: 100;
 $font-weight-normal: 300;
 $font-weight-bold: 600;
 $font-weight-heavy: 700;
@@ -51,6 +52,7 @@ $color-sec-bg: #4d463c;
 $color-main: black;
 $color-background: #EEE8D6;
 
+$xsmall: screen and (min-width: 320px);
 $small: screen and (min-width: 600px);
 $medium: screen and (min-width: 900px);
 $large: screen and (min-width: 1200px);
@@ -58,3 +60,5 @@ $large: screen and (min-width: 1200px);
 $section-height: 100vh;
 $container-default-width: 80%;
 $container-max-width: 1200px;
+
+$section-title-font-size: 7rem;

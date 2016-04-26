@@ -12,6 +12,20 @@
       max-height: $height;
 }
 
+@define-mixin circuitPattern
+  $image,
+  $height: 100vh,
+  $grstart: rgba(255,255,255,.2),
+  $grend: rgba(255,255,255,.3),
+  $bgPos: center center {
+      background: linear-gradient( to bottom, $grstart, $grend), url($image);
+      background-repeat: no-repeat;
+      background-position: $bgPos;
+      background-size: cover;
+      height: 100vh;
+      max-height: $height;
+}
+
 
 /* .header  */
 /*

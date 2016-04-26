@@ -1,0 +1,7 @@
+.image-bg{
+    @mixin backImage '../img/brainpup-info-bg.jpg';   
+}
+
+.white-bg>div{
+    height: 100%;
+}

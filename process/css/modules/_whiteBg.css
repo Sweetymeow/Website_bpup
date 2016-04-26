@@ -1,0 +1,58 @@
+.white-bg{
+/*    background-color: $white;   */
+    @mixin circuitPattern '../img/brainpup_circuitbg.png';
+    font-family: $font-Guj;
+    
+    .white-bg>div{
+        height: 100%;
+    }
+    
+    .section-icon{
+        min-height: 20vh;
+        display: block;
+        padding-top: 2vh;
+        
+        .head-icon{
+            height: 10vh;
+            background: url(../img/brainpup_icon_head.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 60px;
+            margin: 5vh auto 0 auto;
+        }
+        
+        .section-icon-title{
+            margin-top: 0;
+            font-size: .8em;
+            font-weight: bold;
+            color: $black;
+        }
+    } /* section-icon*/
+    
+    .text-content{
+        max-height: 80vh;
+        height: 78vh;
+        
+        .headline{
+            font-size: $section-title-font-size;
+        }
+    }
+}
+
+/*
+.section-icon{
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .head-icon{
+        background: no-repeat fixed top center url('../img/brainpup_icon_head.png') ;
+        min-height: 5vh;
+    }
+
+    .head-icon, .section-icon-title{
+        flex: 1 100%;
+    }
+}
+*/
