@@ -1,0 +1,65 @@
+.footer{
+/*  Postcss color fuction: https://github.com/postcss/postcss-color-function  */
+    @mixin backImage '../img/brainpup-info-bg.jpg', 30vh,rgba(0,0,0,.3), rgba(0,0,0,.8);
+    padding: 2rem;
+    
+    .container{
+        line-height: 110%;
+/*        display: flex;
+        align-items: flex-end;  */
+        .branding{
+            width: 100%;
+            a{
+                display: block;
+                img{
+                    padding-top: 3vh;
+                    display: inline;
+                }
+            }
+        }
+        .branding::after{
+            content: " ";
+            background-image: url('../img/svg/SectionLine4.svg');
+            background-size: cover;
+            background-repeat: repeat-x;
+            position: relative;
+            display: inline-block;
+            width: 80%;
+            height: .5rem;
+            top: 0;
+        }
+
+        .footer-list{
+            color: $dark-sec-link;
+            list-style-type: none;
+            display: flex;
+            margin-top: 2rem;
+            align-items: flex-end;
+            justify-content: center;
+
+            li{
+                margin:0 1rem;
+                line-height: 110%;
+            }
+            li::after {
+                content: "|";
+                padding-left: 1rem; /* create some space between the image and the content before it */
+            }
+        }   
+    }
+/*
+    .container::after{
+        content: " ";
+        background-image: url('../img/svg/SectionLine4.svg');
+        background-size: cover;
+        background-repeat: repeat-x;
+        position: relative;
+        display: inline-block;
+        width: 80%;
+        height: .5rem;
+        top: 0;
+    }
+*/
+    
+/*    clip-path: url(#trapezoid);*/
+}

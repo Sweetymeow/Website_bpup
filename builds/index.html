@@ -56,54 +56,65 @@
     </section>
     <section class="image-bg section" id="members">
 <!--        <header class=""></header>-->
-        <div class="container center">
+       <div class="svgMask">
+           <clipPath width="1024px" height="800px" viewBox="0 0 1024 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="trapezoid">
+            <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.5">
+                <g id="Export_elements" transform="translate(-83.000000, -374.000000)" fill="#161616">
+                    <path d="M83,572.252869 L1107,374 L1107,1002 L83,1200.25287 L83,572.252869 Z" id="TransBlackTrap5"></path>
+                </g>
+            </g>
+        </clipPath>
+       </div>
+        <div class="container center maskContainer">
             <div class="section-icon">
-                <div class="head-icon">
-                    <img src="img/brainpup_icon_head.png" alt="" />
-                </div>
+                <div class="head-icon"></div>
                 <p class="section-icon-title">People</p>
             </div>
             <div class="text-content">
                 <h2 class="headline">Our members</h2>
                 
-                <div class="member-card">
-                    <img src="img/people/AngelaHaston.jpg" alt="member1">
-                    <div class="person-card">
-                        <h3 class="card-name">Di Wang</h3>
-                        <h4 class="card-title">CEO</h4>
-                    </div>
-                    <p class="card-text">Mission: Pioneer the open-source engineering future by helping the engineering community promote and protect themselves while learning and working together.</p>
-                    <button class="light-button"></button>
-                </div><!-- person-card -->
-                
-                <div class="member-card">
-                    <img src="img/people/HenryTwill.jpg" alt="member2">
-                    <div class="person-card">
-                        <h3 class="card-name">Di Wang</h3>
-                        <h4 class="card-title">CEO</h4>
-                    </div>
-                    <p class="card-text">Mission: Pioneer the open-source engineering future by helping the engineering community promote and protect themselves while learning and working together.</p>
-                    <button class="light-button"></button>
-                </div><!-- person-card -->
-                
-                <div class="member-card">
-                    <img src="img/people/MariaSontas.jpg" alt="member3"> 
-                    <div class="person-card">
-                        <h3 class="card-name">Di Wang</h3>
-                        <h4 class="card-title">CEO</h4>
-                    </div>
-                    <p class="card-text">Mission: Pioneer the open-source engineering future by helping the engineering community promote and protect themselves while learning and working together.</p>
-                    <button class="light-button"></button>
-                </div><!-- person-card -->
+                <div class="member-list">
+                    <div class="member-card">
+                        <img class="member-header" src="img/people/HenryTwill.jpg" alt="member1">
+                        <div class="person-card">
+                            <h3 class="card-name">Di Wang</h3>
+                            <h4 class="card-title">CEO</h4>
+                        </div>
+                        <p class="card-text">Mission: Pioneer the open-source engineering future by helping the engineering community promote and protect themselves while learning and working together.</p>
+                        <a class="light-button small-btn" href="#">Student Info</a>
+                    </div><!-- person-card -->
+
+                    <div class="member-card">
+                        <img class="member-header" src="img/people/AngelaHaston.jpg" alt="member2">
+                        <div class="person-card">
+                            <h3 class="card-name">Bernice Wilson</h3>
+                            <h4 class="card-title">CTO</h4>
+                        </div>
+                        <p class="card-text">Mission: Pioneer the open-source engineering future by helping the engineering community promote and protect themselves while learning and working together.</p>
+                        <a class="light-button small-btn" href="#">Personal Info</a>
+                    </div><!-- person-card -->
+
+                    <div class="member-card">
+                        <img class="member-header" src="img/people/MichaelLewiston.jpg" alt="member3"> 
+                        <div class="person-card">
+                            <h3 class="card-name">Ruben Brooks</h3>
+                            <h4 class="card-title">CFO</h4>
+                        </div>
+                        <p class="card-text">Mission: Pioneer the open-source engineering future by helping the engineering community promote and protect themselves while learning and working together.</p>
+                        <a class="light-button small-btn" href="#">Business Info</a>
+                    </div><!-- person-card -->
+                </div>
                 
             </div><!-- person-card -->
         </div>
     </section>
     <section class="white-bg section" id="features">
-        <header class="imagebg"></header>
+<!--        <header class="imagebg"></header>-->
         <div class="container center">
             <div class="section-icon">
-                <img src="img/brainpup_icon_head.png" alt="" class="head-icon">
+                <div class="head-icon"></div>
                 <p class="section-icon-title">Features</p>
             </div>
             <div class="text-content">
@@ -128,10 +139,10 @@
     </section>
     
     <section class="image-bg section" id="announcement">
-        <header class="imagebg"></header>
+<!--        <header class="imagebg"></header>-->
         <div class="container center">
-            <div class="section-icon">
-                <img src="img/brainpup_icon_head.png" alt="" class="head-icon">
+           <div class="section-icon">
+                <div class="head-icon"></div>
                 <p class="section-icon-title">Annoucement</p>
             </div>
             <div class="text-content">
@@ -140,8 +151,10 @@
         </div>
     </section>
     
-    <section class="white-bg section" id="contact">
-        <button>Contact us</button>
+    <section class="white-bg section half-height" id="contact">
+       <div class="container center">
+           <button class="ver-middle large-btn">Contact us</button>
+        </div>
     </section>
     
     <footer class="footer">
@@ -150,11 +163,11 @@
                <a href="#home"><img src="img/brainpup-mainicon.svg" alt="Logo-Brainpup"></a>
            </div><!-- branding -->
            <ul class="footer-list">
-               <li>© Copyright 2015-2016 BrainPup |</li>
-               <li><a href="#">Terms |</a></li>
-               <li><a href="#">About |</a></li>
-               <li><a href="#">Contact  |</a></li>
-               <li><a href="#">Privacy  |</a></li>
+               <li>© Copyright 2015-2016 BrainPup </li>
+               <li><a href="#">Terms </a></li>
+               <li><a href="#">About </a></li>
+               <li><a href="#">Contact  </a></li>
+               <li><a href="#">Privacy  </a></li>
            </ul>
         </div>
     </footer>

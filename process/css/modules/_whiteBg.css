@@ -18,7 +18,7 @@
         
         .head-icon{
             height: 10vh;
-            background: url(../img/brainpup_icon_head.png);
+            background: url('../img/brainpup_icon_head.svg');
             background-repeat: no-repeat;
             background-size: contain;
             width: 60px;
@@ -58,22 +58,40 @@
             }
         }
     }
-}
-
-/*
-.section-icon{
-    min-height: 20vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .head-icon{
-        background: no-repeat fixed top center url('../img/brainpup_icon_head.png') ;
-        min-height: 5vh;
+    
+    button{
+        font-family: $font-Guj; 
+        background-color: $light-sec-btnbg; /* light brown */
+        border: none;
+        border-radius: 1rem;
+        color: $light-sec-btnlabel;
+        padding: 1rem 6rem;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        line-height: 120%;
     }
-
-    .head-icon, .section-icon-title{
-        flex: 1 100%;
+    button:hover {
+        background-color:$light-sec-btnlabel;/* light brown */
+        color: $light-sec-btnbg;
     }
-}
-*/
+    button.small-btn{
+        font-size: 1.4rem;
+        box-shadow: 2px 2px 6px $light-sec-btnshadow;
+    }
+    button.small-btn:hover{
+        box-shadow: 4px 4px 10px $light-sec-btnshadow;
+    }
+    button.large-btn{
+        font-size: 2.6rem;
+        box-shadow: 3px 3px 6px $light-sec-btnshadow;
+    }
+    button.large-btn:hover{        
+        box-shadow: 6px 6px 10px $light-sec-btnshadow;
+    }
+    button.ver-middle{
+        position: relative;
+        top: 50%;
+        transform: 			translateY(-50%);
+    }
+}/*  white-bg  */

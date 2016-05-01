@@ -20,9 +20,10 @@ body {
 }
 
 .container {
-  width: $container-default-width;
-  max-width: $container-max-width;
-  margin: 0 auto;
+    width: $container-default-width;
+    max-width: $container-max-width;
+    margin: 0 auto;
+    height: 100%;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -58,6 +59,10 @@ em {
 header, section{
     min-height: $section-height;
 /*    height: 150vh;*/
+}
+section.half-height{
+    min-height: 50vh;
+    height: 50vh;
 }
 
 .center{

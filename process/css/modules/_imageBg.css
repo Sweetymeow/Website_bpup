@@ -1,7 +1,117 @@
 .image-bg{
     @mixin backImage '../img/brainpup-info-bg.jpg';   
-}
+    clip-path: url(#trapezoid);
+    
+    @media $xsmall{
+        height: $section-H-height;
+    }
+    
+    .white-bg>div{
+        height: 100%;
+    }
+    
+    .section-icon{
+        min-height: 20vh;
+        display: block;
+        padding-top: 2vh;
+        
+        .head-icon{
+            height: 10vh;
+            background: url(../img/brainpup_icon_headW.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 60px;
+            margin: 5vh auto 0 auto;
+        }
+        
+        .section-icon-title{
+            margin-top: 0;
+            font-size: .8em;
+            font-weight: bold;
+            color: $black;
+        }
+    } /* section-icon*/
+    
+    
+    .text-content{
+        max-height: 80vh;
+        height: 78vh;
+        
+        .headline{
+            font-size: $section-title-sm-ft-size;
+            line-height: 3rem;
+            @media $small{
+                font-size: $section-title-font-size;
+                line-height: 8rem;
+            }
+        }
+        
+        .text-content{
+            column-count: 2;
+            column-gap: 30px;
+            margin: 5vh auto;
+            text-align: left;
+            @media $xsmall{
+                column-count: 1;
+                font-size: 1rem;
+            }
+        }
+    }/* main-content */
+    
+    .member-list{
+        display: flex;
+        
+        .member-card{
+            flex: 1;
+            min-height: 20vh;
+            display: block;
+            padding-top: 2vh;
+            color: $white;
 
-.white-bg>div{
-    height: 100%;
+            .member-header{
+                height: 14vh;
+    /*          background: url(../img/brainpup_icon_headW.svg);
+                background-repeat: no-repeat;
+                background-size: contain; */
+                width: 14vh;
+                margin: 5vh auto 0 auto;
+            }
+
+            .person-card{
+                margin-top: 1rem;
+                font-size: 2rem;
+                font-weight: bold;
+                
+                .card-name{}
+                .card-title{margin-top: .5em;}
+            }
+            
+            .light-button{
+                font-family: $font-Guj; 
+                background-color: transparent; /* light brown */
+                border: 1px solid $dark-sec-btnborder;
+                border-radius: 1rem;
+                color: $dark-sec-btnlabel;
+                padding: 1rem 6rem;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                line-height: 120%;
+            }
+            .light-button.small-btn{
+                font-size: 1.4rem;
+                box-shadow: 2px 2px 6px $light-sec-btnshadow;
+            }
+            .light-button.small-btn:hover{
+                box-shadow: 4px 4px 10px $light-sec-btnshadow;
+            }
+            .light-button.large-btn{
+                font-size: 2.6rem;
+                box-shadow: 3px 3px 6px $light-sec-btnshadow;
+            }
+            .light-button.large-btn:hover{        
+                box-shadow: 6px 6px 10px $light-sec-btnshadow;
+            }
+        } 
+    }/* member-list */
 }
