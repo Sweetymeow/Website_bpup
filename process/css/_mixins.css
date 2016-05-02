@@ -20,9 +20,10 @@
       background: linear-gradient( to bottom, $grstart, $grend), url($image);
       background-repeat: no-repeat;
       background-position: $bgPos;
-      background-size: contain;
+/*      background-size: contain;*/
+      background-size: cover;
       height: 100vh;
-      max-height: $height;
+/*      max-height: $height;*/
 }
 
 

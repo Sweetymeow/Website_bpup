@@ -2,9 +2,10 @@
 /*    background-color: $white;   */
     @mixin circuitPattern '../img/brainpup_circuitbg.png';
     font-family: $font-Guj;
+    height: auto;
     
-    @media $xsmall{
-        height: $section-H-height;
+    @media $small{
+        height: $section-height;
     }
     
     .white-bg>div{
@@ -34,37 +35,88 @@
     } /* section-icon*/
     
     
+/*  -------------- 2 column content ------------- */
     .main-content{
-        max-height: 80vh;
-        height: 78vh;
+        min-height: $section-H-height;
+        @media $small{
+            max-height: 80vh;
+            height: 78vh;
+        }
         
         .headline{
             font-size: $section-title-sm-ft-size;
             line-height: 3rem;
             @media $small{
                 font-size: $section-title-font-size;
-                line-height: 8rem;
+                line-height: 5rem;
             }
         }
         
         .text-content{
             column-count: 2;
             column-gap: 30px;
+            font-size: 1.8rem;
+            line-height: 2.2rem;
             margin: 5vh auto;
             text-align: left;
             @media $xsmall{
                 column-count: 1;
-                font-size: 1rem;
+                font-size: 1.2rem;
             }
         }
+        
+        /*  ------------------- Festure list ------------------ */
+        .feature-list{
+            display: flex;
+            flex-flow: row wrap;
+            padding-bottom: 10vh;
+            @media $small{
+               flex-flow: row nowrap; 
+            }
+
+            .feature-card{
+                flex: 1;
+/*                min-height: 20vh;*/
+                min-width: 200px;
+                display: block;
+                padding: 2vh 1vw;
+                color: $light-sec-title;
+                @media $medium{
+                    padding: 2vh 4vw;
+                    font-size: 2rem;
+                }
+
+                .feature-icon{
+                    height: 14vh;
+                    width: 14vh;
+                    margin: 5vh auto 0 auto;
+
+                    .round-header{
+                        border-radius: 50%;
+                    }
+                }
+
+                .feature-name{
+                    margin-top: 3rem;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    @media $medium{
+                        padding: 2vh 4vw;
+                        font-size: 3rem;
+                    }
+                }
+            } 
+        }/* member-list */
     }
     
+/*  --------------center-middle button------------- */
     button{
         font-family: $font-Guj; 
         background-color: $light-sec-btnbg; /* light brown */
         border: none;
         border-radius: 1rem;
         color: $light-sec-btnlabel;
+        margin-top: 2rem;
         padding: 1rem 6rem;
         text-align: center;
         text-decoration: none;
@@ -77,10 +129,12 @@
     }
     button.small-btn{
         font-size: 1.4rem;
+        padding: 1rem 4rem;
         box-shadow: 2px 2px 6px $light-sec-btnshadow;
     }
     button.small-btn:hover{
         box-shadow: 4px 4px 10px $light-sec-btnshadow;
+        font-weight: bold;
     }
     button.large-btn{
         font-size: 2.6rem;
@@ -92,6 +146,6 @@
     button.ver-middle{
         position: relative;
         top: 50%;
-        transform: 			translateY(-50%);
+        transform: translateY(-50%);
     }
 }/*  white-bg  */

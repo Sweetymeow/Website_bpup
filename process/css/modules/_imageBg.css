@@ -1,9 +1,10 @@
 .image-bg{
-    @mixin backImage '../img/brainpup-info-bg.jpg';   
+    @mixin backImage '../img/brainpup-info-bg.jpg',rgba(0,0,0,.5),rgba(0,0,0,.7);   
     clip-path: url(#trapezoid);
+    height: auto;
     
-    @media $xsmall{
-        height: $section-H-height;
+    @media $small{
+        height: $section-height;
     }
     
     .white-bg>div{
@@ -28,17 +29,21 @@
             margin-top: 0;
             font-size: .8em;
             font-weight: bold;
-            color: $black;
+            color: $white;
         }
     } /* section-icon*/
     
     
-    .text-content{
-        max-height: 80vh;
-        height: 78vh;
+    .main-content{
+        min-height: $section-H-height;
+        @media $small{
+            max-height: 80vh;
+            height: 78vh;
+        }
         
         .headline{
             font-size: $section-title-sm-ft-size;
+            color: $dark-sec-title;
             line-height: 3rem;
             @media $small{
                 font-size: $section-title-font-size;
@@ -51,6 +56,7 @@
             column-gap: 30px;
             margin: 5vh auto;
             text-align: left;
+            
             @media $xsmall{
                 column-count: 1;
                 font-size: 1rem;
@@ -60,12 +66,17 @@
     
     .member-list{
         display: flex;
+        flex-flow: row wrap;
+        padding-bottom: 10vh;
+        @media $small{
+           flex-flow: row nowrap; 
+        }
         
         .member-card{
             flex: 1;
             min-height: 20vh;
             display: block;
-            padding-top: 2vh;
+            padding: 2vh 1vw;
             color: $white;
 
             .member-header{
@@ -75,15 +86,31 @@
                 background-size: contain; */
                 width: 14vh;
                 margin: 5vh auto 0 auto;
+                
+                .round-header{
+                    border-radius: 50%;
+                }
+            }
+            .member-header::after{    
+                content: " ";
+                height: 15.26vh;
+                width: 16.66vh;
+                background-image: url('../img/brainpup_icon_memeberphoto.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                display: block;
+                position: relative;
+                top: -100%;
+                right: 18%;
             }
 
             .person-card{
-                margin-top: 1rem;
+                margin-top: 3rem;
                 font-size: 2rem;
                 font-weight: bold;
                 
-                .card-name{}
-                .card-title{margin-top: .5em;}
+                .card-name{ margin-top: 1rem;}
+                .card-title{ margin-top: .5em;}
             }
             
             .light-button{
