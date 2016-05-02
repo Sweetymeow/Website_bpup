@@ -44,11 +44,15 @@
         }
         
         .headline{
+            font-family: $font-Guj;
             font-size: $section-title-sm-ft-size;
+            color: $light-sec-title;
             line-height: 3rem;
+            text-transform: uppercase;
+            
             @media $small{
                 font-size: $section-title-font-size;
-                line-height: 5rem;
+                line-height: 100%;
             }
         }
         
@@ -59,6 +63,10 @@
             line-height: 2.2rem;
             margin: 5vh auto;
             text-align: left;
+            
+            em{
+                font-size: 110%;
+            }
             @media $xsmall{
                 column-count: 1;
                 font-size: 1.2rem;

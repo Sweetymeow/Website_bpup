@@ -42,18 +42,22 @@
         }
         
         .headline{
+            font-family: $font-Guj;
             font-size: $section-title-sm-ft-size;
             color: $dark-sec-title;
             line-height: 3rem;
+            text-transform: uppercase;
             @media $small{
                 font-size: $section-title-font-size;
-                line-height: 8rem;
+                line-height: 100%;
             }
         }
         
         .text-content{
             column-count: 2;
             column-gap: 30px;
+            font-size: 1.8rem;
+            line-height: 2.2rem;
             margin: 5vh auto;
             text-align: left;
             
@@ -108,9 +112,21 @@
                 margin-top: 3rem;
                 font-size: 2rem;
                 font-weight: bold;
+                color: $dark-sec-subtitle;
                 
-                .card-name{ margin-top: 1rem;}
-                .card-title{ margin-top: .5em;}
+                .card-name{ 
+                    color: $dark-sec-subtitle;
+                    margin-top: 1.5rem;
+                }
+                .card-title{ 
+                    color: $dark-sec-title;
+                    font-size: 90%;
+                    margin-top: .5em;
+                }
+            }
+            .person-card-text{
+                opacity: .9;
+                margin: 2.4rem auto 3.6rem auto;
             }
             
             .light-button{
@@ -141,4 +157,28 @@
             }
         } 
     }/* member-list */
+}
+
+
+.image-bg.parallelogram{
+    @mixin backImage '../img/brainpup-info-bg.jpg',rgba(0,0,0,.5),rgba(0,0,0,.7);
+    clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+    
+    @media $small{
+        height: $section-poly-height;
+    }
+    .mask-container{
+        padding-top: 20vh;
+    }
+}
+.image-bg.oppo-parallelogram{
+    @mixin backImage '../img/brainpup-info-bg.jpg',rgba(0,0,0,.5),rgba(0,0,0,.7);
+    clip-path: polygon(0 0, 100% 12%, 100% 100%, 0 88%);
+    
+    @media $small{
+        height: $section-poly-height;
+    }
+    .mask-container{
+        padding-top: 20vh;
+    }
 }

@@ -35,6 +35,7 @@ $black: #000000;
 
 $bg-pattern: #f2f2f2;
 $dark-sec-title: #e3ac54;
+$dark-sec-subtitle: white;
 $dark-sec-link: #FFF;
 $dark-sec-icon: white;
 $dark-sec-btnlabel: #F2B65F;
@@ -59,7 +60,7 @@ $medium: screen and (min-width: 900px);
 $large: screen and (min-width: 1200px);
 
 $section-height: 100vh;
-$section-H-height: 100vh;
+$section-poly-height: 140vh;
 $container-default-width: 80%;
 $container-max-width: 1200px;
 
