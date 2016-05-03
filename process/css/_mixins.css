@@ -11,6 +11,21 @@
       height: 100vh;
       max-height: $height;
 }
+@define-mixin backMobileImage
+  $image,
+  $height: auto,
+  $grstart: rgba(0,0,0,.3),
+  $grend: rgba(0,0,0,.5),
+  $bgPos: center center {
+      background: linear-gradient( to bottom, $grstart, $grend), url($image);
+      background-repeat: no-repeat;
+      background-position: $bgPos;
+      background-size: cover;
+      height: auto;
+      max-height: $height;
+}
+
+
 @define-mixin circuitPattern
   $image,
   $height: 100vh,

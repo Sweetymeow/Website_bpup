@@ -41,6 +41,9 @@ header#bgImage{
             padding-top: 2vh;
             color: $white;
         }
+        .mg-animation{
+            animation-name: puffIn;
+        }
         
         .sub-headline{
             font-family: $font-Guj;
@@ -48,6 +51,8 @@ header#bgImage{
         }
     }
 }
+
+/*---- Test: https://github.com/zhouwenbin/postcss-animation ----*/
 
 /*  
 header#bgImage{ background-image: url('../img/brainpup-info-bg.jpg'); }  

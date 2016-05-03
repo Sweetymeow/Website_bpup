@@ -6,6 +6,9 @@ var gulp = require('gulp'),
   precss = require('precss'),
   cssnano = require('cssnano'),
   animation = require('postcss-animation'),
+  magicAnimation = require('postcss-magic-animations'),
+//  grid = require('postcss-grid'),
+    lost = require('lost'),
   source = 'process/css/',
   dest = 'builds/';
 
@@ -18,6 +21,8 @@ gulp.task('css', function() {
   .pipe(postcss([
     precss(),
     animation(),
+//    magicAnimation(),
+    lost(), // lost-grid
     autoprefixer(),
     cssnano()
   ]))

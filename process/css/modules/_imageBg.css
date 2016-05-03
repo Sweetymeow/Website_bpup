@@ -167,6 +167,11 @@
     @media $small{
         height: $section-poly-height;
     }
+    @media $xsmall{
+        @mixin backMobileImage '../img/brainpup-info-bg.jpg';
+        clip-path: polygon(0 0, 100% 12%, 100% 100%, 0 88%);
+        padding-bottom: 16vh;
+    }
     .mask-container{
         padding-top: 20vh;
     }
@@ -178,6 +183,7 @@
     @media $small{
         height: $section-poly-height;
     }
+
     .mask-container{
         padding-top: 20vh;
     }

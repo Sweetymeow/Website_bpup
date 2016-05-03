@@ -1,7 +1,13 @@
 .footer{
 /*  Postcss color fuction: https://github.com/postcss/postcss-color-function  */
-    @mixin backImage '../img/brainpup-info-bg.jpg', 30vh,rgba(0,0,0,.3), rgba(0,0,0,.8);
-    padding: 2rem;
+    
+    @media $small{
+        @mixin backImage '../img/brainpup-info-bg.jpg', 30vh,rgba(0,0,0,.3), rgba(0,0,0,.6);
+        padding: 2rem;
+    }
+    @media $xsmall{
+         @mixin backImage '../img/brainpup-info-bg.jpg', 40vh,rgba(0,0,0,.3), rgba(0,0,0,.5);
+    }
     
     .container{
         line-height: 110%;
@@ -32,8 +38,8 @@
         .footer-list{
             color: $dark-sec-link;
             list-style-type: none;
-            display: flex;
             margin-top: 2rem;
+            display: flex;
             align-items: flex-end;
             justify-content: center;
 
@@ -44,6 +50,14 @@
             li::after {
                 content: "|";
                 padding-left: 1rem; /* create some space between the image and the content before it */
+            }
+            
+            @media $xsmall{
+                display: block;
+                li{
+                    margin:1rem 1rem 0 1rem;
+                    line-height: 110%;
+                }
             }
         }   
     }

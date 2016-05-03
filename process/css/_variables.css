@@ -54,7 +54,8 @@ $color-main: black;
 /*$color-background: #EEE8D6;*/
 $color-background: #FFF;
 
-$xsmall: screen and (max-width: 425px);
+$xsmall: screen and (max-width: 600px);
+/*$xsmall: screen and (max-width: 425px);*/
 $small: screen and (min-width: 600px);
 $medium: screen and (min-width: 900px);
 $large: screen and (min-width: 1200px);
