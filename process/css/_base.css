@@ -64,7 +64,10 @@ section.half-height{
     min-height: 50vh;
     height: 50vh;
 }
-
+section.auto-height{
+    min-height: auto;
+    height: auto;
+}
 .center{
     text-align: center;
 }

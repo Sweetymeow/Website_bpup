@@ -1,10 +1,4 @@
 header#bgImage{
-    @mixin backImage '../img/brainpup-info-bg.jpg';
-    
-    @media $small{
-        @mixin backImage '../img/brainpup-info-bg.jpg', 800px;
-    }
-    
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -52,6 +46,23 @@ header#bgImage{
     }
 }
 
+header.full-height{
+    @mixin backImage '../img/brainpup-info-bg.jpg';
+    
+    @media $small{
+        @mixin backImage '../img/brainpup-info-bg.jpg', 800px;
+    }
+}
+header.half-height{
+    @mixin backImage '../img/brainpup-info-bg.jpg';
+    
+    @media $small{
+        @mixin backImage '../img/brainpup-info-bg.jpg', 25vh;
+        min-height: 25vh;
+    }
+}
+
+
 /*---- Test: https://github.com/zhouwenbin/postcss-animation ----*/
 
 /*  
@@ -61,37 +72,41 @@ header#bgImage{ background-image: url('../img/brainpup-info-bg.jpg'); }
 header #transcover{
     position: relative;
     background: $sec-trans-cover;
-    height: $section-height;
+/*    height: $section-height;*/
+    height: 100%;
+    
+    .trashape{
+        height: 15vh;
+        width: 100vw;
+        position: absolute;
+        bottom: 0;
+        display: inline-flex;
+        overflow: hidden;
+        
+        span{
+        /*   vertical-align's baseline   */
+            height: 100%;
+            width: 1px;
+            display: inline-block;
+            transform: translateX(-1px);
+            vertical-align:bottom;
+        }
+        
+        .whitetra{
+            float: left;
+            width: 50vw;
+            height: 0;
+            padding-bottom: 20vh;
+            background-image: url('../img/svg/WhiteRectangle.svg');
+            background-clip: border-box;
+            background-size: cover;
+        /*    background-size: contain;*/
+            background-repeat: no-repeat;
+            background-position-y: 100%;
+        }
+    }
 }
 
-header #transcover .trashape{
-    height: 15vh;
-    width: 100vw;
-    position: absolute;
-    bottom: 0;
-    display: inline-flex;
-    overflow: hidden;
-}
-header #transcover .trashape span{
-/*   vertical-align's baseline   */
-    height: 100%;
-    width: 1px;
-    display: inline-block;
-    transform: translateX(-1px);
-    vertical-align:bottom;
-}
-header #transcover .trashape .whitetra{
-    float: left;
-    width: 50vw;
-    height: 0;
-    padding-bottom: 20vh;
-    background-image: url('../img/svg/WhiteRectangle.svg');
-    background-clip: border-box;
-    background-size: cover;
-/*    background-size: contain;*/
-    background-repeat: no-repeat;
-    background-position-y: 100%;
-}
 .right{
     transform: scaleX(-1);
 }

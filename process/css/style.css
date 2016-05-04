@@ -4,9 +4,12 @@
 
 @import "modules/header";
 @import "modules/navigation";
-@import "modules/whiteBg";
-@import "modules/imageBg";
 @import "modules/footer";
+@import "modules/slider";
+
+@import "sections/whiteBg";
+@import "sections/imageBg";
+@import "sections/projects";
 
 /*
 @import "modules/navigation";

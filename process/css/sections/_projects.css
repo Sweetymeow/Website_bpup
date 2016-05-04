@@ -1,0 +1,9 @@
+#projects{
+    .imageheader{
+        @mixin backImage '../img/brainpup-info-bg.jpg', rgba(10,10,10,.3), rgba(10,10,10,.6);
+    }
+    
+    .product-list{
+        
+    }
+}

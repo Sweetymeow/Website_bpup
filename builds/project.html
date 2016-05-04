@@ -8,7 +8,7 @@
 </head>
 
 <body>
-   <header id="bgImage" class="header">
+   <header id="bgImage" class="header half-height">
        <div id="transcover">
            <nav class="nav" role="navigation">
                <div class="container nav-elements center">
@@ -23,50 +23,106 @@
                    </ul><!-- navbar -->
                </div><!-- container nav-elements -->
            </nav>
+<!--
            <div class="container tagline center">
                <p class="sub-headline">Bring open engineering closer </p>
-               <h1 class="headline mg-animation">BRAINPUP.</h1>
            </div>
-           <div class="trashape">
-<!--               <span></span>-->
-               <div class="left whitetra"></div>
-               <div class="right whitetra"></div>
-           </div>
+-->
        </div>
    </header>
-    <section class="white-bg section" id="teamd-intro">
+   
+    <section class="white-bg section auto-height" id="project-slide">
+<!--        <div class="container center"></div>-->
+       <div class="cd-slider-wrapper">
+            <ul class="cd-slider" data-step1="M1402,800h-2V0h1c0.6,0,1,0.4,1,1V800z" data-step2="M1400,800H379L771.2,0H1399c0.6,0,1,0.4,1,1V800z" data-step3="M1400,800H0V0h1399c0.6,0,1,0.4,1,1V800z" data-step4="M-2,800h2V0h-1c-0.6,0-1,0.4-1,1V800z" data-step5="M0,800h1021L628.8,0L1,0C0.4,0,0,0.4,0,1L0,800z" data-step6="M0,800h1400V0L1,0C0.4,0,0,0.4,0,1L0,800z">
+                <li class="visible">
+                    <div class="cd-svg-wrapper">
+                        <svg viewBox="0 0 1400 800">
+                            <title>Aimated SVG</title>
+                            <defs>
+                                <clipPath id="cd-image-1">
+                                    <path id="cd-changing-path-1" d="M1400,800H0V0h1399c0.6,0,1,0.4,1,1V800z"/>
+                                </clipPath>
+                            </defs>
+
+                            <image height='800px' width="1400px" clip-path="url(#cd-image-1)" xlink:href="img/slide/slide_photo_1.jpg"></image>
+                        </svg>
+                    </div> <!-- .cd-svg-wrapper -->
+                </li>
+
+                <li>
+                    <div class="cd-svg-wrapper">
+                        <svg viewBox="0 0 1400 800">
+                            <title>Aimated SVG</title>
+                            <defs>
+                                <clipPath id="cd-image-2">
+                                    <path id="cd-changing-path-2" d="M1400,800H0V0h1399c0.6,0,1,0.4,1,1V800z"/>
+                                </clipPath>
+                            </defs>
+
+                            <image height='800px' width="1400px" clip-path="url(#cd-image-2)" xlink:href="img/slide/slide_photo_2.jpg"></image>
+                        </svg>
+                    </div> <!-- .cd-svg-wrapper -->
+                </li>
+
+                <li>
+                    <div class="cd-svg-wrapper">
+                        <svg viewBox="0 0 1400 800">
+                            <title>Aimated SVG</title>
+                            <defs>
+                                <clipPath id="cd-image-3">
+                                    <path id="cd-changing-path-3" d="M1400,800H0V0h1399c0.6,0,1,0.4,1,1V800z"/>
+                                </clipPath>
+                            </defs>
+
+                            <image height='800px' width="1400px" clip-path="url(#cd-image-3)" xlink:href="img/slide/slide_photo_3.jpg"></image>
+                        </svg>
+                    </div> <!-- .cd-svg-wrapper -->
+                </li>
+
+                <li>
+                    <div class="cd-svg-wrapper">
+                        <svg viewBox="0 0 1400 800">
+                            <title>Aimated SVG</title>
+                            <defs>
+                                <clipPath id="cd-image-4">
+                                    <path id="cd-changing-path-4" d="M1400,800H0V0h1399c0.6,0,1,0.4,1,1V800z"/>
+                                </clipPath>
+                            </defs>
+
+                            <image height='800px' width="1400px" clip-path="url(#cd-image-4)" xlink:href="img/slide/slide_photo_4.jpg"></image>
+                        </svg>
+                    </div> <!-- .cd-svg-wrapper -->
+                </li>
+
+                <!-- other list items here -->
+            </ul> <!-- .cd-slider -->
+
+            <ul class="cd-slider-navigation">
+                <li><a href="#0" class="next-slide">Next</a></li>
+                <li><a href="#0" class="prev-slide">Prev</a></li>
+            </ul> <!-- .cd-slider-navigation -->
+
+            <ol class="cd-slider-controls">
+                <li class="selected"><a href="#0"><em>Item 1</em></a></li>
+                <li><a href="#0"><em>Item 2</em></a></li>
+                <li><a href="#0"><em>Item 3</em></a></li>
+                <li><a href="#0"><em>Item 4</em></a></li>
+                <!-- other list items here -->
+            </ol> <!-- .cd-slider-controls -->
+        </div> <!-- .cd-slider-wrapper -->
+    </section>
+    
+    <section class="image-bg section" id="projects">
         <div class="container center">
-            <div class="section-icon">
-                <div class="head-icon"></div>
-                <p class="section-icon-title">About Brainpup</p>
-            </div>
-            <div class="main-content">
-                <h2 class="headline">Who we are?</h2>
-                <div class="text-content">
-                    <p><em>BrainPup is the world’s first engineering project showcase and open collaboration platform for learning and sharing knowledge.</em></p>
-
-                    <p>We need you to help us make the world a smarter, more connected, better place. Remember, you don't have to be an engineer to be part of the engineering community!</p>
-
-                    <p><em>Help us bridge the gap between students, professors, and industry, no matter where you live!</em></p>
-
-                    <p>Students and the engineering community around the globe can learn about classes, professors, companies, concepts and everything in between. Professors and industry recruiters can find the most qualified candidates to join their lab or organization.</p>
-                </div>
-            </div>
+            <div class="prj-filter"></div>
+            <article class="prj-items">
+                
+            </article>
         </div>
     </section>
-    <section class="image-bg section parallelogram" id="members">
+    <section class="white-bg section" id="memebers">
 <!--        <header class=""></header>-->
-       <div class="svgMask">
-           <clipPath width="1024px" height="800px" viewBox="0 0 1024 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="trapezoid">
-            <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
-
-            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.5">
-                <g id="Export_elements" transform="translate(-83.000000, -374.000000)" fill="#161616">
-                    <path d="M83,572.252869 L1107,374 L1107,1002 L83,1200.25287 L83,572.252869 Z" id="TransBlackTrap5"></path>
-                </g>
-            </g>
-        </clipPath>
-       </div>
         <div class="container center mask-container">
             <div class="section-icon">
                 <div class="head-icon"></div>
@@ -137,5 +193,9 @@
            </ul>
         </div>
     </footer>
+<script src="src/js/jquery-2.1.4.js"></script>
+<script src="src/js/jquery.mobile.custom.min.js"></script>
+<script src="src/js/snap.svg-min.js"></script>
+<script src="src/js/main.js"></script> <!-- Resource jQuery -->
 </body>
 </html>
