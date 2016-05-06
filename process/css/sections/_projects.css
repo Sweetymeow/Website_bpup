@@ -13,7 +13,9 @@ $item-width: 100vw;
         
         .project-filter{
             position: relative;
-            width: calc($item-width/3);
+            @media $small{  width: calc($item-width/3); }
+            @media $medium{  width: calc($item-width/4); }
+            @media $large{  width: calc($item-width/5); }
             float: left;
             
             &::before {
@@ -102,7 +104,9 @@ $item-width: 100vw;
             color: $color-background;
             overflow: hidden;
             
-            width: calc($item-width/3);
+            @media $small{  width: calc($item-width/3); }
+            @media $medium{  width: calc($item-width/4); }
+            @media $large{  width: calc($item-width/5); }
             padding: 3vw;
         }
     }/* proejct-list */

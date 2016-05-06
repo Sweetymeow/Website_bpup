@@ -353,7 +353,14 @@
 <script src="src/js/main.js"></script> <!-- Resource jQuery -->
 <script>
     var projectsHeight = document.getElementById("project-list").offsetHeight;
-    document.getElementById("project-list").style.height = Math.floor(projectsHeight/3) + 200 + "px";
+    var screenWidth = window.innerWidth; // screen.width;
+    if(screenWidth > 1200){
+        document.getElementById("project-list").style.height = Math.floor(projectsHeight/5) + 200 + "px";
+    }else if(screenWidth <= 1200 && screenWidth > 900){
+        document.getElementById("project-list").style.height = Math.floor(projectsHeight/4) + 200 + "px";
+    }else{
+        document.getElementById("project-list").style.height = Math.floor(projectsHeight/3) + 200 + "px";
+    }
 //    alert("height: " + projectsHeight);
 </script>
 </body>
