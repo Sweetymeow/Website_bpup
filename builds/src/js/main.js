@@ -1,6 +1,5 @@
 jQuery(document).ready(function(){
-	/*
-		convert a cubic bezier value to a custom mina easing
+	/*  convert a cubic bezier value to a custom mina easing
 		http://stackoverflow.com/questions/25265197/how-to-convert-a-cubic-bezier-value-to-a-custom-mina-easing-snap-svg
 	*/
 	var duration = 250,

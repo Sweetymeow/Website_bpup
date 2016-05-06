@@ -1,9 +1,109 @@
+$item-width: 100vw;
+/*$item-width: 100%;*/
 #projects{
     .imageheader{
-        @mixin backImage '../img/brainpup-info-bg.jpg', rgba(10,10,10,.3), rgba(10,10,10,.6);
+        @mixin backImage '../img/brainpup-info-bg.jpg', auto, transparent, transparent;
     }
-    
-    .product-list{
+    /* proejcts */
+    .project-list{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-flow: column wrap;
         
-    }
+        .project-filter{
+            position: relative;
+            width: calc($item-width/3);
+            float: left;
+            
+            &::before {
+                content: 'Filter';
+                color: $dark-sec-link;
+                font-size: 2rem;
+                line-height: 4rem;
+                position: absolute;
+                top: 0;
+                left: 2rem;
+                height: 4rem;
+                width: calc(100% - 2rem);
+                background-color: $dark-sec-btnlabel;
+                z-index: 2;
+            }
+            
+            form{ /* .bp-filter > form */ 
+                padding: 5rem 2rem 1rem 2rem;
+                text-align: left;
+                
+                .bp-filter-block{
+                    position: relative;
+                    margin-bottom: 3rem;
+                    
+                    .bp-filter-title{
+                        position: relative;
+                        margin-bottom: .2em;
+                        padding: 10px 0 10px 20px;
+                        color: $light-sec-title;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        font-size: 1.3rem;
+                        user-select: none;
+                        cursor: pointer;
+                        
+                        &:hover {
+                            color: #41307c;
+                        }
+                        
+                        &::before {  /* arrow inside of h4.bp-filter-title  */
+                          content: '';
+                          position: absolute;
+                          left: 0;
+                          top: 50%;
+                          width: 16px;
+                          height: 16px;
+                          background: url("../img/svg/cd-icon-arrow_down.svg") no-repeat center center;
+                          transform: translateY(-50%);
+                          transition: transform 0.3s;
+                        }
+                    }
+                }
+            }
+            
+            .bp-close{
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 4rem;
+                line-height: 4rem;
+/*                width: 60px;*/
+                color: $white;
+                font-size: 1.4rem;
+                text-align: center;
+                background: $dark-sec-btnborder;
+/*                opacity: 0;*/
+                transition: opacity 0.3s;
+                z-index: 3;
+                padding: 0 1.2rem;
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+            
+            .filter-is-visible {
+              transform: translateX(0);
+              box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+            }
+        } 
+        /*---project-filter---*/
+        
+        .project-item{
+            margin: 0;        
+            box-sizing: border-box;
+            position: relative;
+            color: $color-background;
+            overflow: hidden;
+            
+            width: calc($item-width/3);
+            padding: 3vw;
+        }
+    }/* proejct-list */
 }
