@@ -1,6 +1,7 @@
 .white-bg{
 /*    background-color: $white;   */
     @mixin circuitPattern '../img/brainpup_circuitbg.png';
+    
     font-family: $font-Guj;
     height: auto;
     

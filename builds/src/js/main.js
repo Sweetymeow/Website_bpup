@@ -2,6 +2,24 @@ jQuery(document).ready(function(){
 	/*  convert a cubic bezier value to a custom mina easing
 		http://stackoverflow.com/questions/25265197/how-to-convert-a-cubic-bezier-value-to-a-custom-mina-easing-snap-svg
 	*/
+    //close filter dropdown inside lateral .cd-filter 
+	$('.bp-filter-block h4').on('click', function(){
+		$(this).toggleClass('closed').siblings('.bp-filter-content').slideToggle(300);
+	});
+    $('.bp-filter-trigger').on('click', function(){
+		triggerFilter(true);
+	});
+	$('.bp-filter .pb-close').on('click', function(){
+		triggerFilter(false);
+	});
+
+	function triggerFilter($bool) {
+		var elementsToTrigger = $([$('.cd-filter-trigger'), $('.cd-filter'), $('.cd-tab-filter'), $('.cd-gallery')]);
+		elementsToTrigger.each(function(){
+			$(this).toggleClass('filter-is-visible', $bool);
+		});
+	}
+    
 	var duration = 250,
 		epsilon = (1000 / 60 / duration) / 4,
 		firstCustomMinaAnimation = bezier(.42,.03,.77,.63, epsilon),

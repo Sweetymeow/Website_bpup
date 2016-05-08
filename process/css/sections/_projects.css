@@ -3,10 +3,40 @@ $project-width: 10px;
 $card-radius: 4px;
 /*$item-width: 100%;*/
 #projects{
-    background: $light-sec-btnlabel;
+    @mixin circuitPattern '../img/brainpup_circuitbg.png', auto;
+    height: auto;
+/*    background: $light-sec-btnlabel;*/
+    
     .imageheader{
         @mixin backImage '../img/brainpup-info-bg.jpg', auto, transparent, transparent;
     }
+    
+    .tagline{
+        .headline{
+            font-size: 3rem;
+            margin-top: 2rem;
+            color: $dark-sec-title;
+            line-height: 1.6rem;
+            
+            &::after{
+                content: " ";
+                background-image: url('../img/svg/SectionLineG.svg');
+                background-size: cover;
+                background-repeat: repeat-x;
+                position: relative;
+                display: inline-block;
+                width: 100%;
+                height: .3rem;
+                top: 0;
+                opacity: .4;
+            }
+        }
+        .sub-headline{
+            font-size: 1.6rem;
+            margin: .4rem auto 2rem auto;
+        }
+    }
+    
     /* proejcts */
     .project-list{
         padding: 0;
@@ -19,6 +49,7 @@ $card-radius: 4px;
             border-radius: $card-radius;
             padding: 0;
             margin: $project-width $project-width;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
             box-sizing: border-box;
             
             position: relative;
@@ -37,9 +68,8 @@ $card-radius: 4px;
                 top: 0;
                 left: 0;
                 border-radius: $card-radius;
-/*                left: 2rem;*/
                 height: 4rem;
-                width: calc(100% - 2rem);
+                width: 100%;
                 background-color: $dark-sec-btnlabel;
                 z-index: 2;
             }
@@ -50,10 +80,12 @@ $card-radius: 4px;
                 
                 .bp-filter-block{
                     position: relative;
-                    margin-bottom: 3rem;
+                    margin-bottom: 1rem;
+                    
                     ul{
                         list-style: none;
-                        padding-left: 10px;
+                        padding-left: .5rem;
+                        margin: 0 auto 1rem auto;
                     }
                     
                     .bp-filter-title{
@@ -68,7 +100,7 @@ $card-radius: 4px;
                         cursor: pointer;
                         
                         &:hover {
-                            color: #41307c;
+                            color: $dark-sec-title;
                         }
                         
                         &::before {  /* arrow inside of h4.bp-filter-title  */
@@ -232,6 +264,27 @@ $card-radius: 4px;
                         }
                     }
                     
+                    .bp-filter-button{
+                        position: relative;
+                        margin-top: .8rem;
+                        margin-bottom: .2em;
+                        padding: 1rem 2rem;
+                        background: $dark-sec-btnlabel;
+                        color: $dark-sec-btnborder;
+                        border-radius: .6rem;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        font-size: 1.5rem;
+                        user-select: none;
+                        cursor: pointer;
+                        
+                        &:hover {
+                            background: $dark-sec-btnborder;
+                            color: $dark-sec-title;
+                        }
+                        
+                    }
+                    
                 }/*------- bp-filter-block -------*/
             }
             
@@ -242,15 +295,15 @@ $card-radius: 4px;
                 right: 0;
                 height: 4rem;
                 line-height: 4rem;
-/*                width: 60px;*/
                 color: $white;
                 font-size: 1.4rem;
                 text-align: center;
-                background: $dark-sec-btnborder;
-/*                opacity: 0;*/
+                background: color($dark-sec-btnborder a(50%));
+/*                background: color($dark-sec-btnborder a(60%);*/
                 transition: opacity 0.3s;
                 z-index: 3;
                 padding: 0 1.2rem;
+                
                 &:hover{
                     opacity: 0.8;
                 }
@@ -271,7 +324,7 @@ $card-radius: 4px;
             position: relative;
             color: $color-background;
             overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
 /*            padding: 1vw;*/
             padding: 0;
             margin: $project-width $project-width;
@@ -286,8 +339,47 @@ $card-radius: 4px;
                 width: 100%;
             }
             figcaption{
+                font-family: $font-Guj;
                 width: 100%;
-                
+                .bp-project-title{
+                    color: $dark-sec-title;
+                    margin: 1rem .5rem .6rem .5rem;
+                    line-height: 1.8rem;
+                    
+                    a{
+                        font-weight: bold;
+                        color: $dark-sec-title; 
+                    }
+                }
+                .bp-project-team-member{
+                    color: $light-sec-icon;
+                    margin-bottom: .6rem;
+                }
+                .bp-project-count{
+                    display: flex;
+/*                    margin-bottom: .4rem;*/
+                    
+                    .bp-project-view-icon{
+                        flex: 1;
+                        width: 2rem;
+                        margin-left: 1.6rem;
+                    }
+                    span.number{
+                        flex: 1;
+                        margin-left: 1.2rem;
+                        color: $light-sec-icon; 
+                        line-height: 24px;
+                    }
+                }
+                .bp-project-date{
+                    color: $light-sec-icon; 
+                    display: flex;
+                    margin: 0 0 .6rem 1rem;
+                    font-size: .6rem;
+                    .bp-project-date{
+                        flex: 1;
+                    }
+                }
             }
         }
     }/* proejct-list */

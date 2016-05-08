@@ -74,6 +74,25 @@
                 transform: scale(1.1);
             }
         }
+        li.cd-slide-content{
+            width: 60vw;
+            left: 10vw;
+            color: $white;
+            list-style-type: none;
+            text-shadow: 1px 1px 1px $sec-trans-cover;
+/*            background: $sec-trans-cover;*/
+            
+            .cd-slide-title{
+                padding-bottom: 1.2rem;
+                font-size: 3rem;
+                color: $dark-sec-title;
+            }
+            .cd-slide-projname{
+                color: $dark-sec-subtitle;
+                text-overflow: ellipsis;
+                font-weight: 600;
+            }
+        }
         li:last-of-type{
             left: 10px;
             right: auto;
