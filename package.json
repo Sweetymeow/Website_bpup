@@ -3,10 +3,14 @@
   "version": "0.0.1",
   "description": "brainpup website redesign",
   "main": "index.html",
-  "dependencies": {},
+  "dependencies": {
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2"
+  },
   "devDependencies": {
     "autoprefixer": "^6.1.1",
     "bootstrap": "^3.3.6",
+    "browserify": "^13.0.1",
     "cssnano": "^3.3.2",
     "gulp": "^3.9.0",
     "gulp-postcss": "^6.0.1",
