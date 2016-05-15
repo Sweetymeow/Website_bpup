@@ -30,9 +30,12 @@
         }
 
         .cd-svg-wrapper{
-      /* using padding Hack to fix bug on IE - svg height not properly calculated */
+        /* using padding Hack to fix bug on IE - svg height not properly calculated */
             height: 0;
             padding-bottom: 57.15%;
+        /*-- Don't solve the gap between the top and slide images --*/
+            position: relative;
+            top: -4vh;
         }
 
         svg{
@@ -81,6 +84,9 @@
             list-style-type: none;
             text-shadow: 1px 1px 1px $sec-trans-cover;
 /*            background: $sec-trans-cover;*/
+            @media $xsmall{
+                display: none;
+            }
             
             .cd-slide-title{
                 padding-bottom: 1.2rem;
@@ -109,7 +115,7 @@
     -------------------------------- */
     .cd-slider-controls {
         position: absolute;
-        bottom: 20px;
+        bottom: 6vh; /* 40px;*/
         left: 50%;
         right: auto;
         transform: translateX(-50%);

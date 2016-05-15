@@ -9,9 +9,20 @@ var gulp = require('gulp'),
   magicAnimation = require('postcss-magic-animations'),
   colorFunction = require("postcss-color-function"),
 //  grid = require('postcss-grid'),
-  lost = require('lost'),
-  source = 'process/css/',
-  dest = 'builds/';
+  lost = require('lost');
+
+var source = 'process/css/',
+    dest = 'builds/',
+    srcDest = 'builds/src/',
+    srcSource = 'app/';
+
+var react = require('gulp-react');
+ 
+gulp.task('scripts', function () {
+	return gulp.src(srcSource + 'template.jsx')
+		.pipe(react())
+		.pipe(gulp.dest(srcDest + 'js'));
+});
 
 gulp.task('html', function() {
   gulp.src(dest + '*.html');
@@ -35,6 +46,7 @@ gulp.task('css', function() {
 gulp.task('watch', function() {
   gulp.watch(source + '**/*.css', ['css']);
   gulp.watch(dest + '**/*.html', ['html']);
+  gulp.watch(['app/' + '**/*.js', '**/*.jsx'], ['scripts']);
 });
 
 gulp.task('webserver', function() {
@@ -62,4 +74,4 @@ gulp.task('webserver', function() {
 //    }));
 //});
 
-gulp.task('default', ['html', 'css', 'webserver','watch']);
+gulp.task('default', ['scripts', 'html', 'css', 'webserver','watch']);

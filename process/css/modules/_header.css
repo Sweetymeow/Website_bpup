@@ -64,7 +64,12 @@ header#bgImage{
             &:focus + img.search-icon{
                 opacity: 0.4;
             }
+            
+            @media $xsmall{
+                width: 80%;
+            }
         }
+        
 /*
         input:focus + img.search-icon{
             opacity: 0.4;
@@ -76,6 +81,9 @@ header#bgImage{
             margin: .4em;
             right: 30%;
             top: 0;
+            @media $xsmall{
+                right: 10%;
+            }
         }
     }
     
@@ -94,6 +102,11 @@ header.half-height{
     @media $small{
         @mixin backImage '../img/brainpup-info-bg.jpg', 25vh;
         min-height: 25vh;
+    }    
+    
+    @media $xsmall{
+        @mixin backImage '../img/brainpup-info-bg.jpg', 25vh;
+        min-height: 30vh;
     }
 }
 
